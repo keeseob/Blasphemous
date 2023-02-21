@@ -1,4 +1,0 @@
-﻿  keyInput.cpp
-C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\mathPack.h(14,6): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\mathPack.h(15,6): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-  WinAPI_project.vcxproj -> C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\x64\Debug\WinAPI_project.exe
