@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #pragma once
 #include "entity.h"
 #include "object.h"
@@ -21,28 +20,4 @@ namespace BP
 	private:
 		std::vector<object*>mObject;
 	};
-=======
-#pragma once
-#include "entity.h"
-#include "object.h"
-
-namespace BP
-{
-	class layer : public entity
-	{
-	public:
-		layer();
-		virtual ~layer();
-
-		virtual void initialize();
-		virtual void update();
-		virtual void render(HDC hdc);
-		virtual void release();
-
-		void addObject(object* obj);
-
-	private:
-		std::vector<object*>mObject;
-	};
->>>>>>> bfdcdd2571c3c5f275f705fa45aa3757efbf6e94
 }
