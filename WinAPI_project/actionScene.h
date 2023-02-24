@@ -3,7 +3,7 @@
 
 namespace BP
 {
-	class panitentOne;
+	class penitentOne;
 	class background;
 	class actionScene : public scene
 	{
@@ -20,7 +20,7 @@ namespace BP
 		virtual void onExit() override;
 
 	private:
-		panitentOne* mPanitentOne;
+		penitentOne* mPenitentOne;
 		background* mBackground;
 	};
 }

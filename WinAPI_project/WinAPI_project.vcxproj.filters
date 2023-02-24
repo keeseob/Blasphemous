@@ -94,7 +94,7 @@
     <ClInclude Include="actionScene.h">
       <Filter>Engine\Scenes\Action Scene</Filter>
     </ClInclude>
-    <ClInclude Include="panitentOne.h">
+    <ClInclude Include="penitentOne.h">
       <Filter>Contents</Filter>
     </ClInclude>
     <ClInclude Include="object.h">
@@ -117,6 +117,9 @@
       <Filter>Engine\Scenes\Title Scene</Filter>
     </ClInclude>
     <ClInclude Include="background.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
+    <ClInclude Include="titleImage.h">
       <Filter>Contents</Filter>
     </ClInclude>
   </ItemGroup>
@@ -164,7 +167,7 @@
     <ClCompile Include="scene.cpp">
       <Filter>Engine\Scenes</Filter>
     </ClCompile>
-    <ClCompile Include="panitentOne.cpp">
+    <ClCompile Include="penitentOne.cpp">
       <Filter>Contents</Filter>
     </ClCompile>
     <ClCompile Include="object.cpp">
@@ -187,6 +190,9 @@
       <Filter>Engine\Scenes\Title Scene</Filter>
     </ClCompile>
     <ClCompile Include="background.cpp">
+      <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="titleImage.cpp">
       <Filter>Contents</Filter>
     </ClCompile>
   </ItemGroup>

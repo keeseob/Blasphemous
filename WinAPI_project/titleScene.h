@@ -3,6 +3,7 @@
 
 namespace BP
 {
+	class titleImage;
 	class titleScene : public scene
 	{
 	public:
@@ -17,5 +18,6 @@ namespace BP
 		virtual void onEnter() override;
 		virtual void onExit() override;
 	private:
+		titleImage* mTitle;
 	};
 }

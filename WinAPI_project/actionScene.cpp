@@ -1,5 +1,5 @@
 #include "actionScene.h"
-#include "panitentOne.h"
+#include "penitentOne.h"
 #include "keyInput.h"
 #include "sceneManager.h"
 #include "background.h"
@@ -16,9 +16,9 @@ namespace BP
 
 	void actionScene::initialize()
 	{
-		mPanitentOne = new panitentOne();
+		mPenitentOne = new penitentOne();
 		mBackground = new background();
-		addObject(mPanitentOne, eLayerType::player);
+		addObject(mPenitentOne, eLayerType::player);
 		addObject(mBackground, eLayerType::background);
 
 		scene::initialize();

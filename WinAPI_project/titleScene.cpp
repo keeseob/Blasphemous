@@ -1,8 +1,8 @@
 #include "titleScene.h"
 #include "keyInput.h"
 #include "sceneManager.h"
-#include "background.h"
 #include "findResource.h"
+#include "titleImage.h"
 
 namespace BP
 {
@@ -14,6 +14,10 @@ namespace BP
 	}
 	void titleScene::initialize()
 	{
+		mTitle = new titleImage();
+		addObject(mTitle, eLayerType::background);
+
+		scene::initialize();
 	}
 	void titleScene::update()
 	{
@@ -24,6 +28,7 @@ namespace BP
 	}
 	void titleScene::render(HDC hdc)
 	{
+		scene::render(hdc);
 	}
 	void titleScene::release()
 	{

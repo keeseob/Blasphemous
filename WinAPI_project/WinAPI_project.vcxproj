@@ -141,7 +141,7 @@
     <ClInclude Include="actionScene.h" />
     <ClInclude Include="sceneManager.h" />
     <ClInclude Include="scene.h" />
-    <ClInclude Include="panitentOne.h" />
+    <ClInclude Include="penitentOne.h" />
     <ClInclude Include="enumPack.h" />
     <ClInclude Include="includePack.h" />
     <ClInclude Include="application.h" />
@@ -150,6 +150,7 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="time.h" />
+    <ClInclude Include="titleImage.h" />
     <ClInclude Include="titleScene.h" />
     <ClInclude Include="WinAPI_project.h" />
   </ItemGroup>
@@ -167,9 +168,10 @@
     <ClCompile Include="actionScene.cpp" />
     <ClCompile Include="sceneManager.cpp" />
     <ClCompile Include="scene.cpp" />
-    <ClCompile Include="panitentOne.cpp" />
+    <ClCompile Include="penitentOne.cpp" />
     <ClCompile Include="mathPack.cpp" />
     <ClCompile Include="time.cpp" />
+    <ClCompile Include="titleImage.cpp" />
     <ClCompile Include="titleScene.cpp" />
     <ClCompile Include="WinAPI_project.cpp" />
   </ItemGroup>
