@@ -14,9 +14,12 @@ namespace BP
 
 	void background::initialize()
 	{
-		mBack = findResource::load<image_panitentOne>(L"background", L"..\\Resource\\background.bmp");
+		mBack = findResource::load<image_panitentOne>(L"background", L"..\\Resource\\background2.bmp");
 
 		object::initialize();
+
+		mPosition.x = -100;
+		mPosition.y = -150;
 	}
 
 	void background::update()
@@ -29,7 +32,7 @@ namespace BP
 		object::render(hdc);
 
 		BitBlt
-		(hdc, 0, 0, mBack->getWidth(), mBack->getHeight(), mBack->getHdc(), 0, 0, SRCCOPY);
+		(hdc, mPosition.x, mPosition.y, mBack->getWidth(), mBack->getHeight(), mBack->getHdc(), 0, 0, SRCCOPY);
 	}
 
 	void background::release()

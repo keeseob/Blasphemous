@@ -1,6 +1,8 @@
 #include "titleScene.h"
 #include "keyInput.h"
 #include "sceneManager.h"
+#include "background.h"
+#include "findResource.h"
 
 namespace BP
 {
