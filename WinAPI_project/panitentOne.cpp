@@ -1,6 +1,9 @@
 #include "panitentOne.h"
-#include "sceneManager.h"
 #include "time.h"
+#include "sceneManager.h"
+#include "keyInput.h"
+#include "findResource.h"
+
 
 namespace BP
 {
@@ -14,6 +17,8 @@ namespace BP
 
 	void panitentOne::initialize()
 	{
+		mImage = findResource::load<image_panitentOne>(L"panitentOne", L"..\\Resource\\panitentOne.bmp");
+
 		object::initialize();
 
 		mPosition.x = 100;
@@ -21,43 +26,33 @@ namespace BP
 	}
 
 	void panitentOne::update()
-	{
+	{	
 		object::update();
 
-		if (GetAsyncKeyState(VK_LEFT) & 0x8000)
+		if (keyInput::getKeyState(eKeyCode::A) == eKeyState::pressed)
 		{
-			mPosition.x -= 100.0f * time::deltaTime();
+			mPosition.x -= 200.0f * time::deltaTime();
 		}
-		if (GetAsyncKeyState(VK_RIGHT) & 0x8000)
+		if (keyInput::getKeyState(eKeyCode::D) == eKeyState::pressed)
 		{
-			mPosition.x += 100.0f * time::deltaTime();
+			mPosition.x += 200.0f * time::deltaTime();
 		}
-		if (GetAsyncKeyState(VK_UP) & 0x8000)
+		if (keyInput::getKeyState(eKeyCode::W) == eKeyState::pressed)
 		{
-			mPosition.y -= 100.0f * time::deltaTime();
+			mPosition.y -= 400.0f * time::deltaTime();
 		}
-		if (GetAsyncKeyState(VK_DOWN) & 0x8000)
+		if (keyInput::getKeyState(eKeyCode::S) == eKeyState::pressed)
 		{
-			mPosition.y += 100.0f * time::deltaTime();
+			mPosition.y += 400.0f * time::deltaTime();
 		}
 	}
 
 	void panitentOne::render(HDC hdc)
 	{
 		object::render(hdc);
-			//stock 오브젝트
-		HBRUSH brush = CreateSolidBrush(RGB(255, 0, 0));
-		HBRUSH oldBrush = (HBRUSH)SelectObject(hdc, brush);
 
-		HPEN pen = CreatePen(PS_SOLID, 15, RGB(0, 0, 0));
-		HPEN oldPen = (HPEN)SelectObject(hdc, pen);
-
-		Ellipse(hdc, mPosition.x, mPosition.y, mPosition.x + 100, mPosition.y + 100);
-
-		SelectObject(hdc, oldPen);
-		DeleteObject(pen);
-		SelectObject(hdc, oldBrush);
-		DeleteObject(brush);
+		BitBlt
+			(hdc, mPosition.x, mPosition.y, mImage->getWidth(), mImage->getHeight(), mImage->getHdc(), 0, 0, SRCCOPY);
 	}
 
 	void panitentOne::release()

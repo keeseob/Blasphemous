@@ -17,8 +17,8 @@ namespace BP
 			if (comp == nullptr)
 			{
 				continue;
-				comp->initialize();
 			}
+			comp->initialize();
 		}
 	}
 
@@ -29,8 +29,8 @@ namespace BP
 			if (comp == nullptr)
 			{
 				continue;
-				comp->update();
 			}
+			comp->update();
 		}
 	}
 
@@ -41,8 +41,8 @@ namespace BP
 			if (comp == nullptr)
 			{
 				continue;
-				comp->render(hdc);
 			}
+			comp->render(hdc);
 		}
 	}
 
@@ -53,8 +53,8 @@ namespace BP
 			if (comp == nullptr)
 			{
 				continue;
-				comp->release();
 			}
+			comp->release();
 		}
 	}
 }

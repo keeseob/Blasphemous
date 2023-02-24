@@ -41,6 +41,12 @@
     <Filter Include="Engine\Input">
       <UniqueIdentifier>{c10c1af8-83fe-4343-b77c-93514f6c2034}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{ce59ec6d-08fa-485b-8af7-ce10dddd4dae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scenes\Title Scene">
+      <UniqueIdentifier>{3c633bf0-a5c2-40a2-9e70-f912246f649a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -100,6 +106,19 @@
     <ClInclude Include="keyInput.h">
       <Filter>Engine\Input</Filter>
     </ClInclude>
+    <ClInclude Include="bpResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="findResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="image_panitentOne.h" />
+    <ClInclude Include="titleScene.h">
+      <Filter>Engine\Scenes\Title Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="background.h">
+      <Filter>Contents</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI_project.rc">
@@ -111,6 +130,9 @@
       <Filter>리소스 파일</Filter>
     </Image>
     <Image Include="WinAPI_project.ico">
+      <Filter>리소스 파일</Filter>
+    </Image>
+    <Image Include="..\Resource\main_icon.ico">
       <Filter>리소스 파일</Filter>
     </Image>
   </ItemGroup>
@@ -153,6 +175,19 @@
     </ClCompile>
     <ClCompile Include="keyInput.cpp">
       <Filter>Engine\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="bpResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="findResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="image_panitentOne.cpp" />
+    <ClCompile Include="titleScene.cpp">
+      <Filter>Engine\Scenes\Title Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="background.cpp">
+      <Filter>Contents</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -4,7 +4,7 @@
 
 namespace BP
 {
-	class scene :public entity
+	class scene : public entity
 	{
 	public:
 		scene();
@@ -14,6 +14,9 @@ namespace BP
 		virtual void update();
 		virtual void render(HDC hdc);
 		virtual void release();
+
+		virtual void onEnter();
+		virtual void onExit();
 		
 		void addObject(object* obj, eLayerType lyr);
 

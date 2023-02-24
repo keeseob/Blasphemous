@@ -1,14 +1,19 @@
 #include "sceneManager.h"
 #include "actionScene.h"
+#include "titleScene.h"
 
 namespace BP
 {
 	std::vector<scene*> sceneManager::mScene = {};
+	scene* sceneManager::mActiveScene = nullptr;
+
 	void sceneManager::initialize()
 	{
 		mScene.resize((UINT)eSceneType::max);
+		mScene[(UINT)eSceneType::title] = new titleScene();
 		mScene[(UINT)eSceneType::play] = new actionScene();
-		mScene[(UINT)eSceneType::play]->setName(L"PLAYER");
+
+		mActiveScene = mScene[(UINT)eSceneType::title];
 
 		for (scene* scn : mScene)
 		{
@@ -22,26 +27,12 @@ namespace BP
 
 	void sceneManager::update()
 	{
-		for (scene* scn : mScene)
-		{
-			if (scn == nullptr)
-			{
-				continue;
-			}
-			scn->update();
-		}
+		mActiveScene->update();
 	}
 
 	void sceneManager::render(HDC hdc)
 	{
-		for (scene* scn : mScene)
-		{
-			if (scn == nullptr)
-			{
-				continue;
-			}
-			scn->render(hdc);
-		}
+		mActiveScene->render(hdc);
 	}
 
 	void sceneManager::release()
@@ -54,5 +45,15 @@ namespace BP
 			}
 			scn->release();
 		}
+	}
+
+	void sceneManager::loadScene(eSceneType type)
+	{
+		//ÇöÀç ¾À
+		mActiveScene->onExit();
+
+		//´ÙÀ½ ¾À
+		mActiveScene = mScene[(UINT)type];
+		mActiveScene->onEnter();
 	}
 }

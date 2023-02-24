@@ -1,5 +1,8 @@
 #include "actionScene.h"
 #include "panitentOne.h"
+#include "keyInput.h"
+#include "sceneManager.h"
+#include "background.h"
 
 namespace BP
 {
@@ -13,14 +16,19 @@ namespace BP
 
 	void actionScene::initialize()
 	{
-		panitentOne* panitent = new panitentOne();
-		addObject(panitent, eLayerType::player);
+		mPanitentOne = new panitentOne();
+		addObject(mPanitentOne, eLayerType::player);
+		addObject(mBackground, eLayerType::background);
 
 		scene::initialize();
 	}
 
 	void actionScene::update()
 	{
+		if (keyInput::getKeyState(eKeyCode::N) == eKeyState::down)
+		{
+			sceneManager::loadScene(eSceneType::title);
+		}
 		scene::update();
 	}
 
@@ -32,5 +40,15 @@ namespace BP
 	void actionScene::release()
 	{
 		scene::release();
+	}
+
+	void actionScene::onEnter()
+	{
+
+	}
+
+	void actionScene::onExit()
+	{
+		//mPanitentOne->setPosition(vector2{ 0.0f, 0.0f });
 	}
 }

@@ -15,10 +15,10 @@ struct vector2
 		, y(y)
 	{
 	}
-	vector2(vector2& other)
-		: x(other.x)
-		, y(other.y)
-	{
-	}
+	vector2(const vector2&) = default;
+	vector2& operator=(const vector2&) = default;
+
+	vector2(vector2&&) = default;
+	vector2& operator=(vector2&&) = default;
 };
 

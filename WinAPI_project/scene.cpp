@@ -4,6 +4,7 @@ namespace BP
 {
 	scene::scene()
 	{
+		mLayer.reserve(5);
 		mLayer.resize((UINT)eLayerType::end);
 	}
 	scene::~scene()
@@ -39,6 +40,16 @@ namespace BP
 		{
 			lyr.release();
 		}
+	}
+
+	void scene::onEnter()
+	{
+
+	}
+
+	void scene::onExit()
+	{
+
 	}
 
 	void scene::addObject(object* obj, eLayerType lyr)

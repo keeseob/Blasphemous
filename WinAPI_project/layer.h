@@ -18,6 +18,6 @@ namespace BP
 		void addObject(object* obj);
 
 	private:
-		std::vector<object*>mObject;
+		std::vector<object*> mObject;
 	};
 }

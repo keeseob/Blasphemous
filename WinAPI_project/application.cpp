@@ -1,12 +1,11 @@
 #include "application.h"
 #include "sceneManager.h"
 #include "time.h"
+#include "keyInput.h"
 
 namespace BP
 {
-	application::application()
-		: mHwnd(NULL)
-		, mHdc(NULL)
+	application::application() : mHwnd(NULL), mHdc(NULL)
 	{
 	}
 
@@ -19,8 +18,24 @@ namespace BP
 	{
 		mHwnd = hWnd;
 		mHdc = GetDC(hWnd);
+		mWidth = 1600;
+		mHeight = 900;
+
+		//해상도 설정을 위한 윈도우 크기 계산
+		RECT rect = { 0,0,mWidth,mHeight };
+		AdjustWindowRect(&rect, WS_OVERLAPPEDWINDOW, false);
+
+		//윈도우 크기 변경 및 출력
+		SetWindowPos(mHwnd, nullptr, 50, 50, (rect.right - rect.left), (rect.bottom - rect.top), 0);
+		ShowWindow(hWnd, true);
+
+		mBackBuffer = CreateCompatibleBitmap(mHdc, mWidth, mHeight);
+		mBackHdc = CreateCompatibleDC(mHdc);
+		HBITMAP defaultBitmap = (HBITMAP)SelectObject(mBackHdc, mBackBuffer);
+		DeleteObject(defaultBitmap);
 
 		time::initialize();
+		keyInput::initialize();
 		sceneManager::initialize();
 	}
 
@@ -33,14 +48,20 @@ namespace BP
 	void application::update()
 	{
 		time::update();
+		keyInput::update();
 		sceneManager::update();
 	}
-	
 
 	void application::render()
 	{
-		time::render(mHdc);
-		sceneManager::render(mHdc);
+		//clear
+		Rectangle(mBackHdc, -1, -1, 1602, 902);
+
+		time::render(mBackHdc);
+		keyInput::render(mBackHdc);
+		sceneManager::render(mBackHdc);
+
+		//백버퍼 이미지 생성 후, 메인 버퍼에 이미지를 생성해야 한다.
+		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHdc, 0, 0, SRCCOPY);
 	}
 }
-

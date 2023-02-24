@@ -15,6 +15,8 @@ namespace BP
 		virtual void render(HDC hdc);
 		virtual void release();
 
+		void setPosition(vector2 position) { mPosition = position; }
+
 	protected:
 		vector2 mPosition;
 

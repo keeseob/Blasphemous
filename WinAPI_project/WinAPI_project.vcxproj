@@ -128,9 +128,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="background.h" />
+    <ClInclude Include="bpResource.h" />
     <ClInclude Include="component.h" />
     <ClInclude Include="engine.h" />
     <ClInclude Include="entity.h" />
+    <ClInclude Include="findResource.h" />
+    <ClInclude Include="image_panitentOne.h" />
     <ClInclude Include="keyInput.h" />
     <ClInclude Include="layer.h" />
     <ClInclude Include="object.h" />
@@ -146,12 +150,17 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="time.h" />
+    <ClInclude Include="titleScene.h" />
     <ClInclude Include="WinAPI_project.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="application.cpp" />
+    <ClCompile Include="background.cpp" />
+    <ClCompile Include="bpResource.cpp" />
     <ClCompile Include="component.cpp" />
     <ClCompile Include="entity.cpp" />
+    <ClCompile Include="findResource.cpp" />
+    <ClCompile Include="image_panitentOne.cpp" />
     <ClCompile Include="keyInput.cpp" />
     <ClCompile Include="layer.cpp" />
     <ClCompile Include="object.cpp" />
@@ -161,12 +170,14 @@
     <ClCompile Include="panitentOne.cpp" />
     <ClCompile Include="mathPack.cpp" />
     <ClCompile Include="time.cpp" />
+    <ClCompile Include="titleScene.cpp" />
     <ClCompile Include="WinAPI_project.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI_project.rc" />
   </ItemGroup>
   <ItemGroup>
+    <Image Include="..\Resource\main_icon.ico" />
     <Image Include="small.ico" />
     <Image Include="WinAPI_project.ico" />
   </ItemGroup>

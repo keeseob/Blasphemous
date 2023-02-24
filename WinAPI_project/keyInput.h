@@ -10,6 +10,7 @@ namespace BP
 		Z, X, C, V, B, N, M,
 		END,
 	};
+
 	enum class eKeyState
 	{
 		down,
@@ -31,6 +32,12 @@ namespace BP
 		static void initialize();
 		static void update();
 		static void render(HDC hdc);
+
+		inline static eKeyState getKeyState(eKeyCode keyCode) //키 상태를 전역 사용 가능
+		{
+			return mKey[(UINT)keyCode].keyState;
+		};
+		//inline?
 
 	private:
 		static std::vector<key> mKey;

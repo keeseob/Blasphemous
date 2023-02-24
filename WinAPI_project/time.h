@@ -10,13 +10,14 @@ namespace BP
 		static void	update();
 		static void render(HDC hdc);
 
-		static double deltaTime()
+		__forceinline static double deltaTime()
 		{
 			return mDeltaTime;
 		}
 
 	private:
 		static double mDeltaTime;
+		static double mSecond;
 		static LARGE_INTEGER mCpuFrequency;
 		static LARGE_INTEGER mPrevFrequency;
 		static LARGE_INTEGER mCurrFrequency;

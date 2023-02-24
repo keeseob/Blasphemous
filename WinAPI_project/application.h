@@ -14,12 +14,25 @@ namespace BP
 		void update();
 		void render();
 
-		//HWND GetHwnd() { return mHwnd; }
-		//void release();
+		HWND getHwnd()
+		{ 
+			return mHwnd; 
+		}
+		HDC getHdc()
+		{
+			return mHdc;
+		}
 
 	private:
 		HWND mHwnd;
 		HDC mHdc;
+
+		//back buffer
+		HBITMAP mBackBuffer;
+		HDC mBackHdc;
+
+		UINT mWidth;
+		UINT mHeight;
 
 		vector2 mPosition;
 	};

@@ -9,8 +9,14 @@ namespace BP
 		entity();
 		virtual ~entity();
 
-		void setName(const std::wstring& name) { mName = name; }
-		std::wstring& getName() { return mName; }
+		void setName(const std::wstring& name) 
+		{ 
+			mName = name; 
+		}
+		std::wstring& getName() 
+		{
+			return mName; 
+		}
 	private:
 		std::wstring mName;
 	};

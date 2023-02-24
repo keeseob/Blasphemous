@@ -1,9 +1,11 @@
-﻿// WinAPI_project.cpp : 애플리케이션에 대한 진입점을 정의합니다.
-//
+﻿//수정: 0223
+// WinAPI_project.cpp : 애플리케이션에 대한 진입점을 정의합니다.
 
 #include "framework.h"
 #include "WinAPI_project.h"
 #include "application.h"
+#include "sceneManager.h" 
+#include "findResource.h"
 
 #define MAX_LOADSTRING 100
 
@@ -12,7 +14,7 @@ HINSTANCE hInst;                                // 현재 인스턴스입니다.
 WCHAR szTitle[MAX_LOADSTRING];                  // 제목 표시줄 텍스트입니다.
 WCHAR szWindowClass[MAX_LOADSTRING];            // 기본 창 클래스 이름입니다.
 
-BP::application application; //bp_application객체를 전역 변수 선언
+BP::application bp_application; //bp_application객체를 전역 변수 선언
 
 // 이 코드 모듈에 포함된 함수의 선언을 전달합니다:
 ATOM                MyRegisterClass(HINSTANCE hInstance);
@@ -66,10 +68,11 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
         }
         else // 윈도우 관련 메세지가 없을 경우 항상 게임 실행
         {
-            application.run();
+            bp_application.run();
         }
-    }
-
+    } 
+    BP::sceneManager::release();
+    BP::findResource::release();
     return (int) msg.wParam;
 }
 
@@ -125,7 +128,7 @@ BOOL InitInstance(HINSTANCE hInstance, int nCmdShow)
 
    ShowWindow(hWnd, nCmdShow);
    UpdateWindow(hWnd);
-   application.initialize(hWnd);
+   bp_application.initialize(hWnd);
 
    return TRUE;
 }

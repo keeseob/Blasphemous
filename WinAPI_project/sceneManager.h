@@ -11,7 +11,10 @@ namespace BP
 		static void render(HDC hdc);
 		static void release();
 
+		static void loadScene(eSceneType type);
+
 	private:
 		static std::vector<scene*> mScene;
+		static scene* mActiveScene;
 	}; 
 }

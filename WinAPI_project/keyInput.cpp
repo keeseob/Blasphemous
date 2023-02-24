@@ -9,7 +9,7 @@ namespace BP
 		'Z', 'X', 'C', 'V', 'B', 'N', 'M',
 	};
 
-	std::vector<keyInput::key> mKey;
+	std::vector<keyInput::key> keyInput::mKey;
 
 	void keyInput::initialize()
 	{
@@ -27,36 +27,35 @@ namespace BP
 	{
 		for (UINT i = 0; i < (UINT)eKeyCode::END; i++)
 		{
-			if (GetKeyState(ASCII[i]) & 0x8000)
+			if (GetAsyncKeyState(ASCII[i]) & 0x8000) //현재 키보드를 누르고 있는 경우
+				//GetAsyncKeyState: 현재 키 상태를 알리는 함수
 			{
-				if (mKey[i].pressCheck)
+				if (mKey[i].pressCheck) //이전 프레임에 키가 눌려있을 경우
 				{
-					mKey[i].keyState = eKeyState::pressed;
+					mKey[i].keyState = eKeyState::pressed; //press인식
 				}
-				else
+				else //이전 프레임에 키가 눌려있지 않을 경우
 				{
-					mKey[i].keyState = eKeyState::down;
+					mKey[i].keyState = eKeyState::down; //down인식
 				}
 				mKey[i].pressCheck = true;
 			}
-			else
+			else //현재 키보드를 누르지 않는 경우
 			{
-				if (mKey[i].pressCheck)
+				if (mKey[i].pressCheck) //이전 프레임에 키가 눌려있는 경우
 				{
-					mKey[i].keyState = eKeyState::up;
+					mKey[i].keyState = eKeyState::up; //up인식
 				}
-				else
+				else //이전 프레임에 키가 눌려있지 않을 경우
 				{
-					mKey[i].keyState = eKeyState::none;
+					mKey[i].keyState = eKeyState::none; //none상태
 				}
 				mKey[i].pressCheck = false;
 			}
 		}
-
 	}
 	void keyInput::render(HDC hdc)
 	{
 
 	}
-
 }

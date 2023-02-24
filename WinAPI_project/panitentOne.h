@@ -1,5 +1,6 @@
 #pragma once
 #include "object.h"
+#include "image_panitentOne.h"
 
 namespace BP
 {
@@ -15,5 +16,6 @@ namespace BP
 		virtual void release() override;
 
 	private:
+		image_panitentOne* mImage;
 	};
 }
