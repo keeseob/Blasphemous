@@ -17,6 +17,7 @@ namespace BP
 	void actionScene::initialize()
 	{
 		mPanitentOne = new panitentOne();
+		mBackground = new background();
 		addObject(mPanitentOne, eLayerType::player);
 		addObject(mBackground, eLayerType::background);
 

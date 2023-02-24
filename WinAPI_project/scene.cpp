@@ -10,6 +10,7 @@ namespace BP
 	scene::~scene()
 	{
 	}
+
 	void scene::initialize()
 	{
 		for (layer& lyr : mLayer)

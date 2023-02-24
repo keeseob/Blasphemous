@@ -9,7 +9,7 @@ namespace BP
 		template <typename T>
 		static T* find(const std::wstring& key)
 		{
-			//리소스 맵에서 데이터 탐색. 데이터 발견 시, 데이터 반환, 없을 씨 end 반환
+			//리소스 맵에서 데이터 탐색. 데이터 발견 시, 데이터 반환, 없을 시에 end 반환
 			std::map<std::wstring, bpResource*>::iterator iter = mFindResource.find(key);
 			//데이터 발견시 형변환 후, 반환
 			if (iter != mFindResource.end())

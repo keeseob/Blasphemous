@@ -4,7 +4,6 @@
 #include "keyInput.h"
 #include "findResource.h"
 
-
 namespace BP
 {
 	panitentOne::panitentOne()

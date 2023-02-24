@@ -17,9 +17,6 @@ namespace BP
 		mBack = findResource::load<image_panitentOne>(L"background", L"..\\Resource\\background.bmp");
 
 		object::initialize();
-
-		mPosition.x = 0;
-		mPosition.y = 0;
 	}
 
 	void background::update()

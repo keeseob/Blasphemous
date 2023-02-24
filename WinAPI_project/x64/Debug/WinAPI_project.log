@@ -1,1 +1,20 @@
-﻿  WinAPI_project.vcxproj -> C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\x64\Debug\WinAPI_project.exe
+﻿  background.cpp
+C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\mathPack.h(14,6): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\mathPack.h(15,6): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  actionScene.cpp
+C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\mathPack.h(14,6): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\mathPack.h(15,6): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  scene.cpp
+C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\mathPack.h(14,6): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\mathPack.h(15,6): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  panitentOne.cpp
+C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\mathPack.h(14,6): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\mathPack.h(15,6): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\panitentOne.cpp(33,26): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\panitentOne.cpp(37,26): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\panitentOne.cpp(41,26): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\panitentOne.cpp(45,26): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\panitentOne.cpp(54,32): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\WinAPI_project\panitentOne.cpp(54,19): warning C4244: '인수': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+  WinAPI_project.vcxproj -> C:\Users\최기섭\Documents\Assortrock46\WinAPI_project\x64\Debug\WinAPI_project.exe
