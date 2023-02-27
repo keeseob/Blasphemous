@@ -125,6 +125,9 @@
     <ClInclude Include="transformation.h">
       <Filter>Engine\Components</Filter>
     </ClInclude>
+    <ClInclude Include="animation.h">
+      <Filter>Engine\Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI_project.rc">
@@ -199,6 +202,9 @@
       <Filter>Contents</Filter>
     </ClCompile>
     <ClCompile Include="transformation.cpp">
+      <Filter>Engine\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="animation.cpp">
       <Filter>Engine\Components</Filter>
     </ClCompile>
   </ItemGroup>

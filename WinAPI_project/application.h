@@ -24,6 +24,9 @@ namespace BP
 		}
 
 	private:
+		void backgroundBlack();
+
+	private:
 		HWND mHwnd;
 		HDC mHdc;
 

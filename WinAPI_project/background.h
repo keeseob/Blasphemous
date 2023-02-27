@@ -16,6 +16,6 @@ namespace BP
 		virtual void release() override;
 
 	private:
-		image_panitentOne* mBack;
+		image_panitentOne* mImage;
 	};
 }

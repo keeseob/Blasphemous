@@ -15,14 +15,14 @@ namespace BP
 
 	void background::initialize()
 	{
-		mBack = findResource::load<image_panitentOne>(L"background", L"..\\Resource\\background2.bmp");
+		mImage = findResource::load<image_panitentOne>(L"background", L"..\\Resource\\background1.bmp");
 
 		object::initialize();
 		transformation* trns = getComponent<transformation>();
 		vector2 pos = trns->getPosition();
 
-		pos.x = -100;
-		pos.y = -150;
+		pos.x = 0;
+		pos.y = 0;
 
 		trns->setPosition(pos);
 	}
@@ -38,8 +38,8 @@ namespace BP
 		transformation* trns = getComponent<transformation>();
 		vector2 pos = trns->getPosition();
 
-		BitBlt
-		(hdc, pos.x, pos.y, mBack->getWidth(), mBack->getHeight(), mBack->getHdc(), 0, 0, SRCCOPY);
+		TransparentBlt
+		(hdc, pos.x, pos.y, mImage->getWidth() * 2.5, mImage->getHeight() * 2.5, mImage->getHdc(), 0, 0, mImage->getWidth(), mImage->getHeight(), RGB(255, 0, 255));
 	}
 
 	void background::release()

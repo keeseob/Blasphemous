@@ -17,5 +17,7 @@ namespace BP
 
 	private:
 		image_panitentOne* mImage;
+		float mTime;
+		int mIdx;
 	};
 }

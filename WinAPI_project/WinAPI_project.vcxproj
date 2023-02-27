@@ -128,6 +128,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="animation.h" />
     <ClInclude Include="background.h" />
     <ClInclude Include="bpResource.h" />
     <ClInclude Include="component.h" />
@@ -156,6 +157,7 @@
     <ClInclude Include="WinAPI_project.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="animation.cpp" />
     <ClCompile Include="application.cpp" />
     <ClCompile Include="background.cpp" />
     <ClCompile Include="bpResource.cpp" />

@@ -55,7 +55,7 @@ namespace BP
 	void application::render()
 	{
 		//clear
-		Rectangle(mBackHdc, -1, -1, 1602, 902);
+		backgroundBlack();
 
 		time::render(mBackHdc);
 		keyInput::render(mBackHdc);
@@ -64,4 +64,12 @@ namespace BP
 		//백버퍼 이미지 생성 후, 메인 버퍼에 이미지를 생성해야 한다.
 		BitBlt(mHdc, 0, 0, mWidth, mHeight, mBackHdc, 0, 0, SRCCOPY);
 	}
+	void application::backgroundBlack()
+	{
+		HBRUSH grayBrush = CreateSolidBrush(RGB(0, 0, 0));
+		HBRUSH oldbrush = (HBRUSH)SelectObject(mBackHdc, grayBrush);
+		Rectangle(mBackHdc, -1, -1, 1602, 902);
+		SelectObject(mBackHdc, oldbrush);
+		DeleteObject(grayBrush);
+	};
 }
