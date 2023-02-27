@@ -122,6 +122,9 @@
     <ClInclude Include="titleImage.h">
       <Filter>Contents</Filter>
     </ClInclude>
+    <ClInclude Include="transformation.h">
+      <Filter>Engine\Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="WinAPI_project.rc">
@@ -194,6 +197,9 @@
     </ClCompile>
     <ClCompile Include="titleImage.cpp">
       <Filter>Contents</Filter>
+    </ClCompile>
+    <ClCompile Include="transformation.cpp">
+      <Filter>Engine\Components</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

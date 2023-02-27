@@ -5,7 +5,7 @@ enum class eSceneType
 	title,
 	play,
 	ending,
-	max,
+	end,
 };
 
 enum class eLayerType
@@ -15,5 +15,15 @@ enum class eLayerType
 	player,
 	effect,
 	UI,
+	end,
+};
+
+enum class eComponentType
+{
+	transformation,
+	collision,
+	spriteRender,
+	animation,
+	audio,
 	end,
 };

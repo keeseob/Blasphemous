@@ -1,16 +1,19 @@
 #include "object.h"
+#include "transformation.h"
 
 namespace BP
 {
 	object::object()
 	{
+		mComponent.resize((UINT)eComponentType::end);
+		addComponent<transformation>(); //object 실행 시, transformation도 같이 작동
 	}
 
 	object::~object()
 	{
 	}
 
-	void object::initialize()
+	void object::initialize()	
 	{
 		for (component* comp : mComponent)
 		{

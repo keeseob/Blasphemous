@@ -152,6 +152,7 @@
     <ClInclude Include="time.h" />
     <ClInclude Include="titleImage.h" />
     <ClInclude Include="titleScene.h" />
+    <ClInclude Include="transformation.h" />
     <ClInclude Include="WinAPI_project.h" />
   </ItemGroup>
   <ItemGroup>
@@ -173,6 +174,7 @@
     <ClCompile Include="time.cpp" />
     <ClCompile Include="titleImage.cpp" />
     <ClCompile Include="titleScene.cpp" />
+    <ClCompile Include="transformation.cpp" />
     <ClCompile Include="WinAPI_project.cpp" />
   </ItemGroup>
   <ItemGroup>

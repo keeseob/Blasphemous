@@ -9,7 +9,7 @@ namespace BP
 
 	void sceneManager::initialize()
 	{
-		mScene.resize((UINT)eSceneType::max);
+		mScene.resize((UINT)eSceneType::end);
 		mScene[(UINT)eSceneType::title] = new titleScene();
 		mScene[(UINT)eSceneType::play] = new actionScene();
 

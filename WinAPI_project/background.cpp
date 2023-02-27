@@ -1,6 +1,7 @@
 #include "background.h"
 #include "sceneManager.h"
 #include "findResource.h"
+#include "transformation.h"
 
 namespace BP
 {
@@ -17,9 +18,13 @@ namespace BP
 		mBack = findResource::load<image_panitentOne>(L"background", L"..\\Resource\\background2.bmp");
 
 		object::initialize();
+		transformation* trns = getComponent<transformation>();
+		vector2 pos = trns->getPosition();
 
-		mPosition.x = -100;
-		mPosition.y = -150;
+		pos.x = -100;
+		pos.y = -150;
+
+		trns->setPosition(pos);
 	}
 
 	void background::update()
@@ -30,9 +35,11 @@ namespace BP
 	void background::render(HDC hdc)
 	{
 		object::render(hdc);
+		transformation* trns = getComponent<transformation>();
+		vector2 pos = trns->getPosition();
 
 		BitBlt
-		(hdc, mPosition.x, mPosition.y, mBack->getWidth(), mBack->getHeight(), mBack->getHdc(), 0, 0, SRCCOPY);
+		(hdc, pos.x, pos.y, mBack->getWidth(), mBack->getHeight(), mBack->getHdc(), 0, 0, SRCCOPY);
 	}
 
 	void background::release()
